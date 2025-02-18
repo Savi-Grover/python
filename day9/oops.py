@@ -120,3 +120,49 @@ class constClass:
 mcobj=constClass()      # invoke construtor automatically
 mcobj.m1()             # need obj to run method m1
 
+#example 8 - constructor with arguments
+class name:
+    name="smith"
+    def __init__(self,name):
+        print(name)
+        print(self.name)   # class variables accessed by slef
+
+# to call constructor, we need to pass param to obj declaration as constructer is parameterized
+mcc=name("David")
+
+#example 9- emp class has one constrcutor with 3 params- id, name, sal
+#one more method diplay() - whihc will print id,name,salary
+
+class Emp:
+    # no need to create class var here, we can create in method
+    def __init__(self, eid, name, sal):
+        self.eid=eid  #converting local var to class var
+        self.name=name
+        self.sal=sal
+    def display(self):
+        print(self.eid,self.name,self.sal)
+
+e1=Emp(101, "john", 50000)
+e1.display()
+
+e2=Emp(102, "Radnor", 60000)
+e2.display()
+
+
+#example 10- emp class has one constrcutor with 3 params- id, name, sal
+#one more constructor to -  print id,name,salary
+
+class Emp1:
+    # no need to create class var here, we can create in method
+    def __init__(self, eid, name, sal):
+        self.eid=eid  #converting local var to class var
+        self.name=name
+        self.sal=sal
+    def __str__(self):        # default constuctor which return string type of data
+        return(self.ename)
+
+e11=Emp1(101, "john", 50000)
+print(e11)         #print obj command will run str constructor
+
+
+
